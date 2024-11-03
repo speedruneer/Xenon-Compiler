@@ -1,0 +1,10 @@
+#include <TDL.xe>
+#include <DGL.luac>
+
+void func draw_rectangle( int x, int y, int w, int h , color colr) {
+    for ( int cy = 0; cy <= h ) {
+        for ( int cx = 0; cx <= w ) {
+            DGL_setPixel( cx, cy, colr )
+        }
+    }
+}

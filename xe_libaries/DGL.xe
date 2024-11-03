@@ -1,0 +1,22 @@
+#include <pp.luac> // Include preprocessing for compiling purpose (to a .as / .xec file)
+#include <TDL.xe>
+
+#typedef<struct> color {
+    int r; 0 <= r <= 255
+    int g; 0 <= g <= 255
+    int b; 0 <= b <= 255
+}
+#typedef<class> screen_Pixel {
+    int x; 0 <= x <= 1920
+    int y; 0 <= y <= 1080
+    color color
+}
+#typedef<class> screen {
+    int width
+    int height
+    screen<class> func constructor ( int width, int height ) {
+        screen<class> co = screen<class>(width, height)
+        co.pixels[int x][int y] = screen_Pixel(width, height)
+        return co
+    }
+}
